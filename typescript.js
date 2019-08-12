@@ -8,10 +8,19 @@ module.exports = {
   plugins: [
     '@typescript-eslint'
   ],
+  // 解决 js 和 ts 混用遇到的问题。
+  // todo: 对于 vue 文件应该也区分一下 js/ts script，暂时没有好办法。
+  // https://github.com/typescript-eslint/typescript-eslint/issues/109#issuecomment-462179033
+  overrides: [{
+    files: ['*.js', '*.jsx', '*.vue'],
+    rules: {
+      'no-undef': [2],  
+    }
+  }],
   rules: {
     // 由于 eslint 和 typescript 配合上有一定问题，因此需要禁止掉某些配置
     // "no-unused-vars": [1],    // 不使用 js 的，使用 ts 的
-    // eslint 会检测到 interface 未定义，因此需要覆盖掉
+    // eslint 会检测到 interface 未定义，因此需要禁用掉 javascript 的规则，使用 typescript 的规则。
     // https://cn.eslint.org/docs/rules/no-undef
     'no-undef': [0],
 
