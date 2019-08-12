@@ -1,4 +1,7 @@
-# eslint-config-blockabc [![npm][npm-image]][npm-url] [![javascript style guide][standard-image]][standard-url]
+# eslint-config-blockabc 
+![npm](https://img.shields.io/npm/v/eslint-config-blockabc?color=%23ff00) 
+[![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com)
+
 
 An All-in-One ESLint [Shareable Config](http://eslint.org/docs/developer-guide/shareable-configs) project, based on [Standard Style](https://standardjs.com/).
 
