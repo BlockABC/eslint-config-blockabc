@@ -8,43 +8,58 @@ An All-in-One ESLint [Shareable Config](http://eslint.org/docs/developer-guide/s
 This project including ESLint Config for JavaScript, TypeScript, Vue, Nuxt.
 
 ## Usage
+### JavaScript
 1. install
-> npm install eslint-config-blockabc
+> npm install eslint-config-blockabc eslint babel-eslint eslint-config-standard eslint-plugin-import eslint-plugin-node eslint-plugin-promise eslint-plugin-standard -D
 
 2. Add this to your .eslintrc file
 ```json5
 {
-  // javascript project
   "extends": ["blockabc"]
 }
 ```
+
+### Typescript
+Build on **[JavaScript](#javascript)**:
+
+> npm install typescript @typescript-eslint/eslint-plugin @typescript-eslint/parser
 ```json5
 {
-  // typescript project
   "extends": ["blockabc/typescript"]
 }
 ```
+
+### Vue
+Build on **[JavaScript](#javascript)**:
+
+> npm install vue-eslint-parser eslint-plugin-vue eslint-config-standard-jsx eslint-plugin-react -D
+
 ```json5
 {
-  // vue project
   "extends": ["blockabc/vue"]
 }
 ```
+
+### Nuxt
+Build on **[Vue](#vue)**:
+> npm install eslint-plugin-nuxt -D
 ```json5
 {
-  // nuxt project 
   "extends": ["blockabc/nuxt"]
 }
 ```
+
+### Vue-TypeScript
+Build on **[Vue](#vue)** & **[TypeScript](#typescript)**
 ```json5
 {
-  // vue typescript project
   "extends": ["blockabc/vue-ts"]
 }
 ```
+### Nuxt-TypeScript
+Build on **[Nuxt](#nuxt)** & **[TypeScript](typescript)**
 ```json5
 {
-  // nuxt typescript project 
   "extends": ["blockabc/nuxt-ts"]
 }
 ```
@@ -59,17 +74,20 @@ This project including ESLint Config for JavaScript, TypeScript, Vue, Nuxt.
 ### JavaScript 
 1. 函数定义的括号之前要有空格。
 
- 除了社区规范和风格倾向，该规则可以方便代码搜索：搜 `func(` 可以搜到所有函数调用，搜 `func (` 可以搜到函数定义。
+  除了社区规范和风格倾向，该规则可以方便代码搜索：搜 `func(` 可以搜到所有函数调用，搜 `func (` 可以搜到函数定义。
 
 
-### Todo
+## Todo
 1. [vue/require-default-prop](https://github.com/vuejs/eslint-plugin-vue/blob/master/docs/rules/require-default-prop.md)
+
 按理说 String 类型的 props 应该也可以没有默认值。可以给 eslint-plugin-vue 提一个 PR。
 
 2. [vue/mustache-interpolation-spacing](https://github.com/vuejs/eslint-plugin-vue/blob/master/docs/rules/mustache-interpolation-spacing.md)
+
 该规则要求插值的花括号两边有空格，但是是否是必须的呢？这样风格上的好处和坏处分别是什么？
 
 3. vue slots/event
+
 可以增加一个规则，使得所有的 slots 和 events 都必须显式地在 vue 配置上写出，方便后续维护者知道该组件的 "API"。
 ```js
 export default {
