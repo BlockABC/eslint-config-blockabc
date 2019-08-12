@@ -10,10 +10,12 @@ This project including ESLint Config for JavaScript, TypeScript, Vue, Nuxt.
 ## Usage
 ### JavaScript
 1. install
-> npm install eslint-config-blockabc eslint babel-eslint eslint-config-standard eslint-plugin-import eslint-plugin-node eslint-plugin-promise eslint-plugin-standard -D
+```bash
+npm install eslint-config-blockabc eslint babel-eslint eslint-config-standard eslint-plugin-import eslint-plugin-node eslint-plugin-promise eslint-plugin-standard -D
+```
 
 2. Add this to your .eslintrc file
-```json5
+```json
 {
   "extends": ["blockabc"]
 }
@@ -21,9 +23,10 @@ This project including ESLint Config for JavaScript, TypeScript, Vue, Nuxt.
 
 ### Typescript
 Build on **[JavaScript](#javascript)**:
-
-> npm install typescript @typescript-eslint/eslint-plugin @typescript-eslint/parser
-```json5
+```bash
+npm install typescript @typescript-eslint/eslint-plugin @typescript-eslint/parser -D
+```
+```json
 {
   "extends": ["blockabc/typescript"]
 }
@@ -32,9 +35,10 @@ Build on **[JavaScript](#javascript)**:
 ### Vue
 Build on **[JavaScript](#javascript)**:
 
-> npm install vue-eslint-parser eslint-plugin-vue eslint-config-standard-jsx eslint-plugin-react -D
-
-```json5
+```bash
+npm install vue-eslint-parser eslint-plugin-vue eslint-config-standard-jsx eslint-plugin-react -D
+```
+```json
 {
   "extends": ["blockabc/vue"]
 }
@@ -42,8 +46,10 @@ Build on **[JavaScript](#javascript)**:
 
 ### Nuxt
 Build on **[Vue](#vue)**:
-> npm install eslint-plugin-nuxt -D
-```json5
+```bash
+npm install eslint-plugin-nuxt -D
+```
+```json
 {
   "extends": ["blockabc/nuxt"]
 }
@@ -51,14 +57,14 @@ Build on **[Vue](#vue)**:
 
 ### Vue-TypeScript
 Build on **[Vue](#vue)** & **[TypeScript](#typescript)**
-```json5
+```json
 {
   "extends": ["blockabc/vue-ts"]
 }
 ```
 ### Nuxt-TypeScript
 Build on **[Nuxt](#nuxt)** & **[TypeScript](typescript)**
-```json5
+```json
 {
   "extends": ["blockabc/nuxt-ts"]
 }
