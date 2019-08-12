@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-blockabc",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "A All-in-One eslint config project based on Standard Style",
   "main": "index.js",
   "scripts": {
