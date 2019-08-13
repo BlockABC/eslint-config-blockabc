@@ -104,3 +104,8 @@ export default {
     }
 }
 ``` 
+
+4. vue/attributes-order
+
+该规则有点奇怪，没有按照 order 的意图去排序，代码应该是有问题的，有时间可以去看一下，提个 PR。
+[attributes-order.js](https://github.com/vuejs/eslint-plugin-vue/blob/5d26e943bcba5544d820e9152a796582cc9a4beb/lib/rules/attributes-order.js)
