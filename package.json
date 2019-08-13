@@ -21,27 +21,18 @@
   "author": "JeffJing",
   "license": "MIT",
   "peerDependencies": {
-    "@typescript-eslint/eslint-plugin": "^1.13.0",
-    "@typescript-eslint/parser": "^1.13.0",
-    "babel-eslint": "^10.0.2",
     "eslint": "^6.1.0",
-    "eslint-config-standard": "^13.0.1",
-    "eslint-config-standard-jsx": "^7.0.0",
-    "eslint-plugin-import": "^2.18.2",
-    "eslint-plugin-node": "^9.1.0",
-    "eslint-plugin-nuxt": "^0.4.3",
-    "eslint-plugin-promise": "^4.2.1",
-    "eslint-plugin-react": "^7.14.3",
-    "eslint-plugin-standard": "^4.0.0",
-    "eslint-plugin-vue": "^5.2.3",
     "typescript": "^3.5.3",
-    "vue-eslint-parser": "^6.0.4"
+    "babel-eslint": "^10.0.2"
+  },
+  "devDependencies": {
+    "eslint": "^6.1.0",
+    "typescript": "^3.5.3",
+    "babel-eslint": "^10.0.2"
   },
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "^1.13.0",
     "@typescript-eslint/parser": "^1.13.0",
-    "babel-eslint": "^10.0.2",
-    "eslint": "^6.1.0",
     "eslint-config-standard": "^13.0.1",
     "eslint-config-standard-jsx": "^7.0.0",
     "eslint-plugin-import": "^2.18.2",
@@ -51,7 +42,6 @@
     "eslint-plugin-react": "^7.14.3",
     "eslint-plugin-standard": "^4.0.0",
     "eslint-plugin-vue": "^5.2.3",
-    "typescript": "^3.5.3",
     "vue-eslint-parser": "^6.0.4"
   }
 }
