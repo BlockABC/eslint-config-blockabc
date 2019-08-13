@@ -72,6 +72,7 @@ Build on **[Nuxt](#nuxt)** & **[TypeScript](typescript)**
 
 ## FAQ
 1. Sequence in eslintrc's `extends` field is important. Your config should always be the last one in `extends` array. [https://github.com/eslint/eslint/issues/9191](https://github.com/eslint/eslint/issues/9191)
+2. You can run `eslint --print-config [file]` to see active eslint rules for specific file.
 
 ## Notable
 ### Vue
