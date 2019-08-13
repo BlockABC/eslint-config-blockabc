@@ -59,6 +59,9 @@ module.exports = {
     '@typescript-eslint/indent': [2, 2],
     // 允许使用 require，因为启用必有原因
     // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-var-requires.md
-    '@typescript-eslint/no-var-requires': [0]
+    '@typescript-eslint/no-var-requires': [0],
+
+    // "no-useless-constructor": 0, // typescript 中 constructor 存在只是明确参数类型的情况
+    // "no-dupe-class-members": 0, // typescript 中存在方法重载的情况，eslint 还无法区分
   }
 }

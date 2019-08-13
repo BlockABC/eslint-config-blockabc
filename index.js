@@ -34,7 +34,7 @@ module.exports = {
       objects: 'only-multiline',
       imports: 'only-multiline',
       exports: 'only-multiline',
-      functions: 'never',
+      functions: 'only-multiline',
     }],
     // Class 的成员之间要有空行，除了单行成员之后（比如属性、单行方法）
     // https://eslint.org/docs/rules/lines-between-class-members#require-or-disallow-an-empty-line-between-class-members-lines-between-class-members
@@ -81,5 +81,10 @@ module.exports = {
     // 禁止使用 var
     // https://eslint.org/docs/rules/no-var
     'no-var': [2],
+
+    // "no-trailing-spaces": ["error", {
+    //   "skipBlankLines": true,
+    //   "ignoreComments": true
+    // }],
   }
 }
