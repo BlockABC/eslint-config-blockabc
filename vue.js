@@ -11,17 +11,6 @@ module.exports = {
     parser: 'babel-eslint',
   },
   rules: {
-    // 允许一个元素单行有三个属性；多行情况下可以有两个属性；允许第一个属性和标签名在同一行，且属性纵向对齐
-    // 本规则相对宽松，实际上应该由单行字符数来决定是否开启新行，但是由于没办法设定，因此设定相对宽松规则（下限），由开发自己可读性保证
-    // https://github.com/vuejs/eslint-plugin-vue/blob/master/docs/rules/max-attributes-per-line.md#multiline-1-allowfirstline-true
-    'vue/max-attributes-per-line': [2, {
-      singleline: 4,
-      multiline: {
-        max: 3,
-        allowFirstLine: true
-      }
-    }],
-
     // todo: 暂时不太确定用哪种，先不处理
     // PascalCase 的好处在于和文件名统一；kebab-case 的好处在于和 class 名统一
     // https://github.com/vuejs/eslint-plugin-vue/blob/master/docs/rules/name-property-casing.md
@@ -65,8 +54,23 @@ module.exports = {
     // https://github.com/vuejs/eslint-plugin-vue/blob/master/docs/rules/valid-template-root.md
     'vue/valid-template-root': [0],
 
-    // 'vue/mustache-interpolation-spacing': [0], // vue template 的注入不需要空格
-    // 'vue/require-default-prop': [0], // 不需要默认prop
-    // 'vue/attribute-hyphenation': [0], // 参数不需要中划线分隔
+    // 允许一个元素单行最多有 4 个属性；多行情况下可以有两个属性；允许第一个属性和标签名在同一行，且属性纵向对齐
+    // 本规则相对宽松，实际上应该由单行字符数来决定是否开启新行，但是由于没办法设定，因此设定相对宽松规则（下限），由开发自己可读性保证
+    // https://github.com/vuejs/eslint-plugin-vue/blob/master/docs/rules/max-attributes-per-line.md#multiline-1-allowfirstline-true
+    'vue/max-attributes-per-line': [2, {
+      singleline: 4,
+      multiline: {
+        max: 3,
+        allowFirstLine: true
+      }
+    }],
+
+    // 参数不需要强制中划线分隔
+    // https://github.com/vuejs/eslint-plugin-vue/blob/master/docs/rules/attribute-hyphenation.md
+    'vue/attribute-hyphenation': [0],
+
+    // jsx 的属性缩进和第一个属性保持一致。该规则和 vue/max-attributes-per-line 类似
+    // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-indent-props.md
+    'react/jsx-indent-props': [2, 'first'],
   }
 }

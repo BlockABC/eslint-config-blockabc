@@ -43,10 +43,14 @@ module.exports = {
 
     // 用 camelCase, 除了属性、析构（和后台请求有关）
     // https://eslint.org/docs/rules/camelcase
-    camelcase: [2, {
+    'camelcase': [2, {
       properties: 'never',
       ignoreDestructuring: true
     }],
+
+    // 未初始化的 var 可以合成一个；初始化的 var 一定要分开。 todo: 未初始化的 var 的行为待定
+    // https://eslint.org/docs/rules/one-var
+    'one-var': [2, { 'initialized': 'never', 'uninitialized': 'consecutive' }],
 
     // 降低"返回一个赋值语句"的错误等级。有些情况下（比如事件回调），return 一个赋值语句还挺常见的
     // https://eslint.org/docs/rules/no-return-assign
@@ -56,22 +60,25 @@ module.exports = {
     // https://eslint.org/docs/rules/jsx-quotes
     'jsx-quotes': [2, 'prefer-double'],
 
+    // 一个对象里面，保持一致性就好。有些情况下（比如 className)，对象的 key 写成字符串，比用字面量要清晰。
+    // https://eslint.org/docs/rules/quote-props
+    'quote-props': [2, 'consistent'],
+
     // 允许 callback 传入字面量。规则本身是多余的，standard 官方也在考虑取消掉了
     // https://github.com/standard/standard/issues/1352
+    // https://github.com/standard/eslint-plugin-standard/issues/12
     'standard/no-callback-literal': [0],
 
     // 'arrow-parens': [0], // 单个参数的情况下不需要圆括号
     // "no-console": [0],
     'brace-style': [2, 'stroustrup'],
 
-    // "no-multi-spaces": [0], // todo: 看一下如何允许注释的格式化前面的空格
-    // "jsx-quotes": 0,  // 引号     // todo:双引号"react/jsx-tag-spacing": 0,
-    // "react/jsx-indent-props": 0,      // 看一下怎么配置为对齐第一个prop todo:
-    // "brace-style": 0,       // todo: 对于else来说，倾向于不在同一行，要看下怎么单独配置 if else 的括号
-    // "indent": 1,
-    // "no-var": 2,
-    // "prefer-const": 2,
-    // "no-callback-literal": 0 // standard 的愚蠢决定 https://github.com/standard/eslint-plugin-standard/issues/12#issuecomment-298227852
+    // 允许声明的等号前面的多个空格（等号对齐）。todo: 怎么让对象、等号、注释都对齐？
+    // https://eslint.org/docs/rules/no-multi-spaces
+    'no-multi-spaces': [2, { exceptions: { 'VariableDeclarator': true } }],
 
+    // 禁止使用 var
+    // https://eslint.org/docs/rules/no-var
+    'no-var': [2],
   }
 }
