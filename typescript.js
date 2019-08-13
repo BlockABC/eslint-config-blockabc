@@ -14,7 +14,7 @@ module.exports = {
   overrides: [{
     files: ['*.js', '*.jsx', '*.vue'],
     rules: {
-      'no-undef': [2],  
+      'no-undef': [2],
     }
   }],
   rules: {

@@ -44,6 +44,10 @@ module.exports = {
       ]
     }],
 
+    // 提高"组件属性的顺序"的等级。
+    // https://github.com/vuejs/eslint-plugin-vue/blob/master/docs/rules/order-in-components.md
+    'vue/order-in-components': [2],
+
     // 不关心闭合标签是否另起一行。todo: 暂时不确定有什么优劣，不作处理
     // https://github.com/vuejs/eslint-plugin-vue/blob/master/docs/rules/html-closing-bracket-newline.md
     'vue/html-closing-bracket-newline': [0, {
