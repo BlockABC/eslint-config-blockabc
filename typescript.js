@@ -1,12 +1,11 @@
 module.exports = {
-  extends: [
-    'plugin:@typescript-eslint/recommended',
-
-    './index.js',
-  ],
-  parser: '@typescript-eslint/parser',
   plugins: [
     '@typescript-eslint'
+  ],
+  parser: '@typescript-eslint/parser',
+  extends: [
+    'plugin:@typescript-eslint/recommended',
+    './index.js',
   ],
   // 解决 js 和 ts 混用遇到的问题。
   // todo: 对于 vue 文件应该也区分一下 js/ts script，暂时没有好办法。
@@ -19,10 +18,13 @@ module.exports = {
   }],
   rules: {
     // 由于 eslint 和 typescript 配合上有一定问题，因此需要禁止掉某些配置
-    // "no-unused-vars": [1],    // 不使用 js 的，使用 ts 的
+    'no-unused-vars': [0], // 不使用 js 的，使用 ts 的
     // eslint 会检测到 interface 未定义，因此需要禁用掉 javascript 的规则，使用 typescript 的规则。
     // https://cn.eslint.org/docs/rules/no-undef
     'no-undef': [0],
+    // eslint 配置是否允许 foo.hasOwnProperty("bar") 的写法，eslint 建议用 Object.prototype.hasOwnProperty.call(foo, "bar") 这种写法，但是太啰嗦不做强制。
+    // https://eslint.org/docs/rules/no-prototype-builtins
+    'no-prototype-builtins': [1],
 
     // typescript 配置
 

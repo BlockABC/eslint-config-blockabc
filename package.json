@@ -1,7 +1,8 @@
 {
   "name": "eslint-config-blockabc",
-  "version": "0.6.1",
+  "version": "0.7.1",
   "description": "A All-in-One eslint config project based on Standard Style",
+  "repository": "https://github.com/BlockABC/eslint-config-blockabc",
   "main": "index.js",
   "scripts": {
     "lint": "eslint ./*.js",
@@ -31,10 +32,10 @@
     "babel-eslint": "^10.0.2"
   },
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^1.13.0",
-    "@typescript-eslint/parser": "^1.13.0",
-    "eslint-config-standard": "^13.0.1",
-    "eslint-config-standard-jsx": "^7.0.0",
+    "@typescript-eslint/eslint-plugin": "^2.0.0",
+    "@typescript-eslint/parser": "^2.0.0",
+    "eslint-config-standard": "^14.0.0",
+    "eslint-config-standard-jsx": "^8.0.0",
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-node": "^9.1.0",
     "eslint-plugin-nuxt": "^0.4.3",
