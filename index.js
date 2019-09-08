@@ -49,9 +49,11 @@ module.exports = {
       ignoreDestructuring: true
     }],
 
-    // 未初始化的 var 可以合成一个；初始化的 var 一定要分开。 todo: 未初始化的 var 的行为待定
+    // 遵循 standard 的规则就好
     // https://eslint.org/docs/rules/one-var
-    'one-var': [2, { 'initialized': 'never', 'uninitialized': 'consecutive' }],
+    // 'one-var': [2, {
+    //   'initialized': 'never',
+    // }],
 
     // 降低"返回一个赋值语句"的错误等级。有些情况下（比如事件回调），return 一个赋值语句还挺常见的
     // https://eslint.org/docs/rules/no-return-assign
