@@ -36,6 +36,9 @@ module.exports = {
     '@typescript-eslint/member-delimiter-style': [2, {
       multiline: {
         delimiter: 'comma',
+      },
+      singleline: {
+        delimiter: 'comma',
       }
     }],
     // 用 camelCase, 除了属性、析构（和后台请求有关）
