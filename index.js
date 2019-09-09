@@ -76,9 +76,15 @@ module.exports = {
     // "no-console": [0],
     'brace-style': [2, 'stroustrup'],
 
+    // 允许注释的空格（为了对齐）
     // 允许声明的等号前面的多个空格（等号对齐）。todo: 怎么让对象、等号、注释都对齐？
     // https://eslint.org/docs/rules/no-multi-spaces
-    'no-multi-spaces': [2, { exceptions: { 'VariableDeclarator': true } }],
+    'no-multi-spaces': [2, {
+      ignoreEOLComments: true,
+      exceptions: {
+        'VariableDeclarator': true
+      }
+    }],
 
     // 禁止使用 var
     // https://eslint.org/docs/rules/no-var
