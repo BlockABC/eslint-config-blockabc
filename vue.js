@@ -72,5 +72,8 @@ module.exports = {
     // jsx 的属性缩进和第一个属性保持一致。该规则和 vue/max-attributes-per-line 类似
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-indent-props.md
     'react/jsx-indent-props': [2, 'first'],
+
+    // 默认规则本身挺好的，但是可能不太适合 vue 环境
+    'react/jsx-handler-names': [0],
   }
 }
