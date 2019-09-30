@@ -41,6 +41,8 @@ module.exports = {
         delimiter: 'comma',
       }
     }],
+    // 由于 js 的 camelcase 规则无法识别 ts 的 interface，因此 ts 下启用 js 的 camelcase 规则，使用 ts 的 camelcase 规则
+    'camelcase': [0],
     // 用 camelCase, 除了属性、析构（和后台请求有关）
     // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/camelcase.md
     '@typescript-eslint/camelcase': [2, {
