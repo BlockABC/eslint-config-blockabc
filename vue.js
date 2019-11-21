@@ -73,7 +73,22 @@ module.exports = {
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-indent-props.md
     'react/jsx-indent-props': [2, 'first'],
 
-    // 默认规则本身挺好的，但是可能不太适合 vue 环境
-    'react/jsx-handler-names': [0],
+    // 默认规则本身挺好的，但是可能不太适合 vue 环境。
+    // 由于 vue 是有专门的事件属性的（而不是像 react 一样传函数），因此 eventHandlerPrefix 可以是 on，更为简洁
+    // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-handler-names.md
+    'react/jsx-handler-names': [2, {
+      eventHandlerPrefix: 'on',
+    }],
+
+    // 不强制 jsx 的元素的首个属性的缩进
+    // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-first-prop-new-line.md
+    'react/jsx-first-prop-new-line': [0],
+
+    // 忽略 jsx 里面的属性的缩进，以允许其可以和首个不换行的属性对齐
+    // https://github.com/typescript-eslint/typescript-eslint/issues/415
+    // https://eslint.org/docs/rules/indent
+    'indent': [2, 2, {
+      ignoredNodes: ['JSXAttribute']
+    }],
   }
 }
