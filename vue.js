@@ -78,6 +78,7 @@ module.exports = {
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-handler-names.md
     'react/jsx-handler-names': [2, {
       eventHandlerPrefix: 'on',
+      eventHandlerPropPrefix: 'on',
     }],
 
     // 不强制 jsx 的元素的首个属性的缩进
