@@ -32,10 +32,33 @@ module.exports = {
         'CONTENT'
       ]
     }],
-
-    // 提高"组件属性的顺序"的等级。
+    // 提高"组件属性的顺序"的等级，修改 head/data 的顺序
     // https://github.com/vuejs/eslint-plugin-vue/blob/master/docs/rules/order-in-components.md
-    'vue/order-in-components': [2],
+    'vue/order-in-components': [2, {
+      'order': [
+        'el',
+        'name',
+        'parent',
+        'functional',
+        ['delimiters', 'comments'],
+        'head',
+        ['components', 'directives', 'filters'],
+        'extends',
+        'mixins',
+        'inheritAttrs',
+        'model',
+        ['props', 'propsData'],
+        'fetch',
+        'data',
+        'asyncData',
+        'computed',
+        'watch',
+        'LIFECYCLE_HOOKS',
+        'methods',
+        ['template', 'render'],
+        'renderError'
+      ]
+    }],
 
     // 不关心闭合标签是否另起一行。todo: 暂时不确定有什么优劣，不作处理
     // https://github.com/vuejs/eslint-plugin-vue/blob/master/docs/rules/html-closing-bracket-newline.md
