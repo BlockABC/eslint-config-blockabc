@@ -70,6 +70,9 @@ module.exports = {
     // 一般来说不推荐重命名 this，但是如果遇到重命名的，一定是有需求的（比如指明上下文类型）
     // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-this-alias.md
     '@typescript-eslint/no-this-alias': [0],
+    // 存在改变泛型的 extend，不应该被 warning: `export interface AxiosResponse<T = any> extends Promise<T> {}`
+    // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-empty-interface.md
+    '@typescript-eslint/no-empty-interface': [0]
     // "no-useless-constructor": 0, // typescript 中 constructor 存在只是明确参数类型的情况
     // "no-dupe-class-members": 0, // typescript 中存在方法重载的情况，eslint 还无法区分
   }
