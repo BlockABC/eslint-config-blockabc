@@ -4,7 +4,7 @@
   "description": "A All-in-One eslint config project based on Standard Style",
   "main": "index.js",
   "scripts": {
-    "lint": "eslint ./*.js",
+    "lint": "eslint --ext .js,.ts .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [

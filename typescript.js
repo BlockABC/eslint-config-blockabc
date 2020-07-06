@@ -4,7 +4,7 @@ module.exports = {
   ],
   parser: '@typescript-eslint/parser',
   extends: [
-    'plugin:@typescript-eslint/recommended',
+    'standard-with-typescript',
     './index.js',
   ],
   // 解决 js 和 ts 混用遇到的问题。
