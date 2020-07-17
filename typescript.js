@@ -1,3 +1,5 @@
+const eslintConfigJs = require('./index')
+
 module.exports = {
   plugins: [
     '@typescript-eslint'
@@ -61,6 +63,8 @@ module.exports = {
         parameterProperties: 'off'
       }
     }],
+    // as per brace-style
+    '@typescript-eslint/brace-style': eslintConfigJs.rules['brace-style'],
     // 两个空格缩进
     // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/indent.md
     '@typescript-eslint/indent': [2, 2],
