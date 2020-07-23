@@ -43,14 +43,13 @@ module.exports = {
         delimiter: 'comma',
       }
     }],
-    // 由于 js 的 camelcase 规则无法识别 ts 的 interface，因此 ts 下启用 js 的 camelcase 规则，使用 ts 的 camelcase 规则
-    'camelcase': [0],
-    // 用 camelCase, 除了属性、析构（和后台请求有关）
-    // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/camelcase.md
-    '@typescript-eslint/camelcase': [2, {
-      properties: 'never',
-      ignoreDestructuring: true
+    // used for compatible with @typescript-eslint/no-floating-promises, which ask to use void to indicate a standalone promise
+    // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-floating-promises.md#ignorevoid
+    'no-void': [2, {
+      allowAsStatement: true,
     }],
+    // 由于 js 的 camelcase 规则无法识别 ts 的 interface，因此 ts 下弃用 js 的 camelcase 规则，使用 @typescript-eslint/naming-convention 规则 (from standard-with-typescript)
+    'camelcase': [0],
     // todo: 暂时对其 accessibility 没有过多要求，该条规则待定
     // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/explicit-member-accessibility.md
     '@typescript-eslint/explicit-member-accessibility': [2, {
@@ -76,7 +75,17 @@ module.exports = {
     '@typescript-eslint/no-this-alias': [0],
     // 存在改变泛型的 extend，不应该被 warning: `export interface AxiosResponse<T = any> extends Promise<T> {}`
     // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-empty-interface.md
-    '@typescript-eslint/no-empty-interface': [0]
+    '@typescript-eslint/no-empty-interface': [0],
+    // we should, but we sometimes we don't have the ability to add return type, therefore a warning is our bottom line
+    // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/explicit-function-return-type.md
+    '@typescript-eslint/explicit-function-return-type': [1],
+
+    // do not check boolean expressions, as it is the nature of js pattern, and it's everywhere
+    // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/strict-boolean-expressions.md
+    '@typescript-eslint/strict-boolean-expressions': [0],
+    // maybe we don't need to mark it as async
+    // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/promise-function-async.md
+    '@typescript-eslint/promise-function-async': [0],
     // "no-useless-constructor": 0, // typescript 中 constructor 存在只是明确参数类型的情况
     // "no-dupe-class-members": 0, // typescript 中存在方法重载的情况，eslint 还无法区分
   }
