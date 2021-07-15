@@ -32,28 +32,30 @@
   "homepage": "https://github.com/BlockABC/eslint-config-blockabc",
   "license": "MIT",
   "peerDependencies": {
-    "eslint": "^7.3.1",
-    "typescript": "^3.9.5",
+    "eslint": "^7.30.0",
+    "typescript": "^4.3.5",
     "babel-eslint": "^10.1.0"
   },
   "devDependencies": {
-    "eslint": "^7.3.1",
-    "typescript": "^3.9.5",
-    "babel-eslint": "^10.1.0"
+    "@types/node": "^16.3.2",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.30.0",
+    "nuxt": "^2.15.7",
+    "typescript": "^4.3.5"
   },
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^3.4.0",
-    "@typescript-eslint/parser": "^3.4.0",
-    "eslint-config-standard": "^14.1.1",
-    "eslint-config-standard-jsx": "^8.1.0",
-    "eslint-config-standard-with-typescript": "^18.0.2",
-    "eslint-plugin-import": "^2.22.0",
+    "@typescript-eslint/eslint-plugin": "^4.28.3",
+    "@typescript-eslint/parser": "^4.28.3",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-config-standard-jsx": "^10.0.0",
+    "eslint-config-standard-with-typescript": "^20.0.0",
+    "eslint-plugin-import": "^2.23.4",
     "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-nuxt": "^1.0.0",
-    "eslint-plugin-promise": "^4.2.1",
-    "eslint-plugin-react": "^7.20.1",
-    "eslint-plugin-standard": "^4.0.1",
-    "eslint-plugin-vue": "^6.2.2",
-    "vue-eslint-parser": "^7.1.0"
+    "eslint-plugin-nuxt": "^2.0.0",
+    "eslint-plugin-promise": "^5.1.0",
+    "eslint-plugin-react": "^7.24.0",
+    "eslint-plugin-standard": "^4.1.0",
+    "eslint-plugin-vue": "^7.13.0",
+    "vue-eslint-parser": "^7.8.0"
   }
 }
