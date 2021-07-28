@@ -31,6 +31,10 @@ module.exports = {
     // https://eslint.org/docs/rules/no-prototype-builtins
     'no-prototype-builtins': [1],
 
+    // We do not need the JS version of this rule for TypeScript
+    // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-useless-constructor.md
+    'no-useless-constructor': [0],
+
     // typescript 配置
 
     // 接口名不做强制。todo: typescript 推荐不用 I 作为开头，为什么？
