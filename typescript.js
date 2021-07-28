@@ -9,8 +9,8 @@ module.exports = {
     project: './tsconfig.json'
   },
   extends: [
-    'standard-with-typescript',
     './index.js',
+    'standard-with-typescript',
   ],
   // 解决 js 和 ts 混用遇到的问题。
   // todo: 对于 vue 文件应该也区分一下 js/ts script，暂时没有好办法。
