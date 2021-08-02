@@ -8,7 +8,7 @@ module.exports = {
   // https://www.npmjs.com/package/vue-eslint-parser#parseroptionsparser
   parser: 'vue-eslint-parser',
   parserOptions: {
-    parser: 'babel-eslint',
+    parser: '@babel/eslint-parser',
   },
   rules: {
     // todo: 暂时不太确定用哪种，先不处理

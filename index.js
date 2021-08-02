@@ -1,6 +1,6 @@
 module.exports = {
   root: true,
-  parser: 'babel-eslint',
+  parser: '@babel/eslint-parser',
   parserOptions: {
     ecmaVersion: 2019,
     sourceType: 'module',
@@ -11,7 +11,7 @@ module.exports = {
       impliedStrict: true,
       jsx: true
     },
-    // 即使没有 babelrc，也使用 babel-eslint 解析
+    // use `@babel/eslint-parser` even if there is no babelrc file
     requireConfigFile: false,
     // 仅允许 import export 出现在顶层
     allowImportExportEverywhere: false

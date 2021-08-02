@@ -11,7 +11,7 @@ This project including ESLint Config for JavaScript, TypeScript, Vue, Nuxt.
 ### JavaScript
 1. install
 ```bash
-npm install eslint-config-blockabc eslint babel-eslint eslint-config-standard eslint-plugin-import eslint-plugin-node eslint-plugin-promise eslint-plugin-standard -D
+npm install eslint-config-blockabc eslint @babel/eslint-parser eslint-config-standard eslint-plugin-import eslint-plugin-node eslint-plugin-promise eslint-plugin-standard -D
 ```
 
 2. Add this to your .eslintrc file
