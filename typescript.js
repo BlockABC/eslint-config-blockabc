@@ -37,6 +37,8 @@ module.exports = {
 
     // typescript 配置
 
+    // we can tolerate some unused vars in development
+    '@typescript-eslint/no-unused-vars': [1],
     // 接口名不做强制。todo: typescript 推荐不用 I 作为开头，为什么？
     // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/interface-name-prefix.md
     '@typescript-eslint/interface-name-prefix': [0],
