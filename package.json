@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "lint": "eslint --ext .js,.ts .",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "npm run test:javascript & npm run test:typescript & npm run test:vue & npm run test:vue-ts & npm run test:nuxt & npm run test:nuxt-ts",
     "test:javascript": "eslint -c index.js test/javascript.js",
     "test:typescript": "eslint -c typescript.js test/typescript.ts",
     "test:vue": "eslint -c vue.js test/vue.vue test/javascript.js",
