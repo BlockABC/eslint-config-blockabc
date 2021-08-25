@@ -22,6 +22,9 @@ module.exports = {
     }
   }],
   rules: {
+    // override comma-dangle rule in standard-with-typescript
+    'comma-dangle': require('./index').rules['comma-dangle'],
+
     // 由于 eslint 和 typescript 配合上有一定问题，因此需要禁止掉某些配置
     'no-unused-vars': [0], // 不使用 js 的，使用 ts 的
     // eslint 会检测到 interface 未定义，因此需要禁用掉 javascript 的规则，使用 typescript 的规则。
