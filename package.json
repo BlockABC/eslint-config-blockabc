@@ -11,7 +11,7 @@
     "test:vue": "eslint -c vue.js test/vue.vue test/javascript.js",
     "test:nuxt": "eslint -c nuxt.js test/nuxt.vue test/javascript.js test/nuxt.config.js",
     "test:vue-ts": "eslint -c vue-ts.js test/vue-ts.vue test/typescript.ts",
-    "test:nuxt-ts": "eslint -c nuxt-ts.js test/nuxt-ts.vue test/typescript.ts"
+    "test:nuxt-ts": "eslint -c nuxt-ts.js test/nuxt-ts.vue test/typescript.ts test/javascript.js"
   },
   "keywords": [
     "eslint",
