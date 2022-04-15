@@ -8,6 +8,8 @@
     "node_modules"
   ],
   "include": [
-    "test"
+    "test",
+    "*.js",
+    ".eslintrc.js",
   ]
 }

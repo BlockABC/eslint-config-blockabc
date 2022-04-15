@@ -1,6 +1,7 @@
 module.exports = {
   extends: [
     'plugin:vue/recommended',
+    'plugin:vue/vue3-recommended',
     'standard-jsx',
 
     './index.js',
@@ -84,7 +85,6 @@ module.exports = {
       singleline: 4,
       multiline: {
         max: 3,
-        allowFirstLine: true
       }
     }],
 
