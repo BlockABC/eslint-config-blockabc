@@ -12,6 +12,17 @@ module.exports = {
     parser: '@babel/eslint-parser',
   },
   rules: {
+    // The `index/default/error.vue` is allowed, especially for nuxt pages/layout
+    // https://eslint.vuejs.org/rules/component-tags-order.html
+    'vue/multi-word-component-names': ['warn', {
+      ignores: ['index', 'default', 'error', 'empty'],
+    }],
+    // We use this sequence for the reason that template is relative to style & script, while script has no relation with style.
+    // This means that we place relevant tag together
+    // https://eslint.vuejs.org/rules/component-tags-order.html
+    'vue/component-tags-order': ['warn', {
+      order: ['style', 'template', 'script']
+    }],
     // todo: 暂时不太确定用哪种，先不处理
     // PascalCase 的好处在于和文件名统一；kebab-case 的好处在于和 class 名统一
     // https://github.com/vuejs/eslint-plugin-vue/blob/master/docs/rules/name-property-casing.md
