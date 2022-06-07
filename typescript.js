@@ -42,12 +42,19 @@ module.exports = {
 
     // typescript 配置
 
+    // allow object literal type assertion, which is disallowed by StandardJS. eg. a[key] = {name: 'name' ,age: 18} as Person
+    // https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/docs/rules/consistent-type-assertions.md
+    '@typescript-eslint/consistent-type-assertions': [2, {
+      assertionStyle: 'as',
+      objectLiteralTypeAssertions: 'allow'
+    }],
+
     // we can tolerate some unused vars in development
     '@typescript-eslint/no-unused-vars': [1],
     // 接口名不做强制。todo: typescript 推荐不用 I 作为开头，为什么？
     // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/interface-name-prefix.md
     '@typescript-eslint/interface-name-prefix': [0],
-    // interface 里面用逗号，而不是分号
+    // Use comma(,) instead of semi-colon(;) as delimiter in interface
     // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/member-delimiter-style.md
     '@typescript-eslint/member-delimiter-style': [2, {
       multiline: {
