@@ -91,6 +91,7 @@ module.exports = {
     // 允许使用 require，因为启用必有原因
     // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-var-requires.md
     '@typescript-eslint/no-var-requires': [0],
+
     // 一般来说不推荐重命名 this，但是如果遇到重命名的，一定是有需求的（比如指明上下文类型）
     // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-this-alias.md
     '@typescript-eslint/no-this-alias': [0],
@@ -100,6 +101,10 @@ module.exports = {
     // we should, but we sometimes we don't have the ability to add return type, therefore a warning is our bottom line
     // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/explicit-function-return-type.md
     '@typescript-eslint/explicit-function-return-type': [1],
+
+    // To make sure every error stack trace in promise is handled properly.
+    // https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/docs/rules/return-await.md
+    '@typescript-eslint/return-await': [2, 'always'],
 
     // do not check boolean expressions, as it is the nature of js pattern, and it's everywhere
     // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/strict-boolean-expressions.md
