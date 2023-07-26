@@ -121,5 +121,11 @@ module.exports = {
     '@typescript-eslint/promise-function-async': [0],
     // "no-useless-constructor": 0, // typescript 中 constructor 存在只是明确参数类型的情况
     // "no-dupe-class-members": 0, // typescript 中存在方法重载的情况，eslint 还无法区分
+
+    /**
+     * When we want to use assertion, it often means that there are some edge cases.
+     * @url https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/docs/rules/no-non-null-assertion.md
+     */
+    "@typescript-eslint/no-non-null-assertion": [0]
   }
 }
